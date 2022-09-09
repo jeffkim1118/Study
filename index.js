@@ -1,14 +1,20 @@
 function timeConversion(s) {
-
-    let res;
-    let hour = s.substring(0,2)
-    if(s[8] === 'P' && parseInt(hour) === 12) res = hour
-    else if(s[8] === 'A' && parseInt(hour) === 12) res = "00"
-    else if(s[8] === 'P') res = 12+parseInt(hour)
-    else res = hour
-    
-    console.log( String(res) + s.substring(2,8))
-    
+    if(s.indexOf('PM') > -1){
+        // '00:00:00AM' -> ['00', '00', '00']
+        const arr = s.slice(0,8).split(":");
+        if(arr[0] == 12){
+            arr[0] = '12';
+        }else{
+            arr[0] = Number(arr[0])+12
+        }
+        console.log(arr.join(':'));
+    }else{
+        const arr = s.slice(0,8).split(":");
+        if(arr[0] == 12){
+            arr[0] = '00';
+        }
+        console.log(arr.join(':'));
+    }
 }
 
-timeConversion("24:01:00PM")
+timeConversion("07:05:45PM")
