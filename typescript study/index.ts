@@ -1,5 +1,9 @@
-async function hello() {
-    return 'world'
-}
+import express from "express";
+const app = express();
 
-const url = new URL('...')
+app.get("/", function (req, res) {
+  res.sen
+//       ^|
+});
+
+app.listen(3000);
