@@ -20,22 +20,76 @@ prints out: 3, 4, 5, 6, 7
 */
 
 //My Solution
-function printArray(array){
-    let newArray = array.slice()
-    let sortedArray = newArray.sort((a,b) => a - b)
-    for(let i = 0; i<sortedArray.length; i++){
-        if(sortedArray[i] == i+1){
-            console.log(sortedArray[i])
-        }
+function buildFunction(){
+    const data = {
+        input: [],
+        output: []
+    }
+    return (numbers) => {
+        data.input = data.input.concat(numbers)
+        data.input.sort()
+        data.input.forEach(n => {
+            if(data.output.includes(n)){
+                return
+            }
+
+            if(n === 1){
+                data.output.push(n)
+                console.log(n)
+            }
+
+            let printMe = true
+            for(let i = n - 1; i >= 1; i++){
+                if(i > 1 && !data.output.includes(i)){
+                    printMe = false
+                    break
+                }
+            }
+
+            if(printMe){
+                data.output.push(n)
+                console.log(n)
+            }
+        })
+        // let max = 0
+        // data.input.forEach(n=>{
+        //     if(n>max){
+        //         max = n;
+        //     }
+        // })
+
+        // const forOutPut = [];
+        // for(let i = 1; i <= max; i++){
+        //     if(!data.output.includes(i) && !data.output.includes(i)){
+        //         data.output.push(i)
+        //         forOutPut.push(i)
+        //     }
+        // }
+        // console.log(forOutPut.join(", "))
     }
 }
-printArray([3, 4, 1])
+const printArray = buildFunction()
+
+printArray([2, 5])
+printArray([1])
+printArray([3, 4, 7, 6])
+
+// function printArray(array){
+//     let newArray = array.slice()
+//     let sortedArray = newArray.sort((a,b) => a - b)
+//     for(let i = 0; i<sortedArray.length; i++){
+//         if(sortedArray[i] == i+1){
+//             console.log(sortedArray[i])
+//         }
+//     }
+// }
+// printArray([3, 4, 1])
 
 
 
 /*
 Build a function to find the minimum amount of obstacles that need to be destroyed
-to make the blocks to reach the bottom.
+to make the blocks to reach the bottom. (Pretend that the blocks are falling to the bottom.)
 
 * = block
 0 = empty space
