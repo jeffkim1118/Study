@@ -190,17 +190,51 @@ Input:
 // return res
 
 
-function jumpingOnClouds(c, k) {
-    let e = 100; let index = []
-    for(let i = 0; i < c.length; i++){
-        if(c[i] == 1){
-            e -= 2;
-        }
-        e--;
-    }
-    console.log(e);
-}
+// function jumpingOnClouds(c, k) {
+//     let e = 100; let index = []
+//     for(let i = 0; i < c.length; i++){
+//         if(c[i] == 1){
+//             e -= 2;
+//         }
+//         e--;
+//     }
+//     console.log(e);
+// }
 
-let c = [0, 0, 1, 0, 0, 1, 1, 0]
-let k = 2
-jumpingOnClouds(c, k)
+// let c = [0, 0, 1, 0, 0, 1, 1, 0]
+// let k = 2
+// jumpingOnClouds(c, k)
+
+
+// function getMinimumOperations(binaryStr) {
+    // let counter = 0;
+    // let first;
+    // let second;
+    // let strArray = binaryStr.split('')
+    // console.log(strArray)
+    // for(let i = 0; i < strArray.length; i++){
+    //     first = strArray[i]
+    //     second = strArray[i+1]
+    //     if(strArray[i] == 1 || strArray[i+1] == 1){
+    //         counter+=1
+    //     }
+    // }
+    
+//     let move = 0;
+//     let i = 0;
+    
+//     while(i < binaryStr.length){
+//         let char = binaryStr[i];
+//         if(char == "0"){
+//             i++
+//         }
+//         if(char == "1"){
+//             i=i+2;
+//             move++;
+//         }
+//     }
+//     console.log(move)
+
+// }
+// getMinimumOperations("1111")
+
