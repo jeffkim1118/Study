@@ -3,6 +3,8 @@
 // In other words, it should not be null or undefined or false
 // Return false otherwise
 
+// Source: https://www.jschallenger.com/javascript-practice/javascript-objects/object-has-property-defined-value-javascript
+
 function myFunction(a,b){
     if(b in a){
         if(a.b == null || a.b == undefined || a.b == false){
