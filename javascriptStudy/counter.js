@@ -1,7 +1,7 @@
 //check if each words are longer than 5 characters
 let arr = ['apple', 'orange', 'banana', 'watermelon', 'grapes']
 
-let charCounter = 0;
+// let charCounter = 0;
 
 //First way
 // for(const fruit of arr){
@@ -27,3 +27,8 @@ let charCounter = 0;
 //   }
 //   charCounter = 0;
 // }
+
+
+// Third way (Without a counter)
+console.log(arr.filter((fruit) => fruit.length > 5).length)
+
