@@ -6,14 +6,16 @@
 // Source: https://www.jschallenger.com/javascript-practice/javascript-objects/object-has-property-defined-value-javascript
 
 function myFunction(a,b){
-    if(b in a){
-        if(a.b == null || a.b == undefined || a.b == false){
-            return false
-        }else{
-            return true
-        }
-    }else{
-        return false
-    }
+    // if(b in a){
+    //     if(a[b] == null || a[b] == undefined || a[b] == false){
+    //         console.log(false)
+    //     }else{
+    //         console.log(true)
+    //     }
+    // }else{
+    //     console.log(false)
+    // }
+
+    console.log(Boolean(a[b]))
 }
 myFunction({a:1,b:2,c:3},'b')
