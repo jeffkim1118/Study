@@ -30,5 +30,10 @@ let arr = ['apple', 'orange', 'banana', 'watermelon', 'grapes']
 
 
 // Third way (Without a counter)
-console.log(arr.filter((fruit) => fruit.length > 5).length)
+let filteredResult;
+for(let i = 0; i < arr.length; i++){
+    filteredResult = arr.filter((fruit) => fruit.length > 5)
+}
+filteredResult.map((fru) => fru.length > 5 ? console.log(true) : console.log(false))
+
 
