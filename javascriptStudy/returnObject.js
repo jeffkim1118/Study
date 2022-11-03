@@ -2,18 +2,20 @@ let string3 = 'dksfjdsklfjdksfdskfjdkfd' // {d:’d’, k:’k’…}
 
 function returnObject(s){
     let newObj = {};
-    
-    // let arr = s.split('');
-    // console.log(arr)
-
+    // First Way
     // for(let i = 0; i < s.length; i++){
     //     newObj[s[i]] = s[i]
     // }
 
-    // s.split('').map((y) => {newObj[y] = y})
+    // Second Way
+    let result = s.split('').map((y) => newObj[y] = y)
 
-    // s.split('').forEach((x) => {newObj[x] = x})
-    
+
+    // Third Way
+    // s.split('').forEach((x) => newObj[x] = x)
+
+    // Fourth Way
+    s.split('').reduce((x) => newObj[x] = x)
     console.log(newObj)
 }
 returnObject(string3);
