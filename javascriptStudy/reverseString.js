@@ -1,9 +1,54 @@
 // Reverse a given string but characters inside of "{}" must not be reversed.
 
-function reverseString(s){
+function reverseString(){
+    // let result = s.split('').reverse().replace(/\{.*?\}/g, a => reverseString(a))
+    // let sub = s.find(/\{.*?\}/g)
+    // console.log(sub)
+
+    // let arr = ['sdfosfddf', '{sfsdf}', 'fddsafsd']
+
+    let string = 'abs{dkjfklsd}dkfjsdkf'
     
-}
-reverseString('abcd{ef}ghij')  // expect: 'jihg{ef}dcba'
+    
+
+    // let arr = [''];
+
+    // for(let i = 0; i<string.length;i++){
+    //     if(string[i] === '{'){
+    //         arr.push(string[i])
+    //     }else if(string[i] === '}'){
+    //         arr[arr.length-1] += '}'
+    //         arr.push('');
+    //     }else{
+    //         arr[arr.length-1] += string[i]
+    //     }
+    // }
+
+    string.split('')
+
+    console.log(arr)
+
+    // console.log(s.split(/(\w+(?=\{|$)|\{\w+\})/g))
+    // let startIndex;
+    // let endIndex;
+//    let stringArray = s.split('');
+//    if(stringArray.includes('{' || '}')){ 
+//     let reversedArray = stringArray.reverse();
+//     for(let i = 0; i < reverseString.length; i++){
+//         if(reversedArray[i] === '}'){
+//             startIndex = reversedArray.indexOf(reversedArray[i])
+//         }else if(reversedArray[i] === "{"){
+//             endIndex = reversedArray.indexOf(reversedArray[i])
+//         }
+//     }
+//    }else{
+//     console.log(s)
+//    }
+
+}reverseString()
+// reverseString('abs') // expect: 'sba'
+// reverseString('abcd{ef}ghij')  // expect: 'jihg{ef}dcba'
+// reverseString('abcd{dfe}dfsaf{bsd}') // expect: '{bsd}fasfd{dfe}dcba
 
 
 
