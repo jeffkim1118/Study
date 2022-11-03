@@ -1,7 +1,14 @@
  // true or false
 
 function bracket(s){
-    s.split('').map((x) => console.log(x))
+    let arr = ['']
+    s.split('').map((x) => {
+        if(x === '{'){
+            arr.push(x);
+        }else if(x === '}'){
+            
+        }
+    })
 }
 
 bracket('{}{}{}{}{{{{}}}{{{}{}{}')
