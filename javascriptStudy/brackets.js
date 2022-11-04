@@ -1,9 +1,9 @@
  // true or false
 
  // Function for checking the end part of the array;
-function peek(array){
-    return array[array.length -1]
-}
+// function peek(array){
+//     return array[array.length -1]
+// }
 
 function bracket(s){
     let array = []
@@ -14,7 +14,7 @@ function bracket(s){
         }else if (s[i] === '}'){
             if(array.length === 0){
                 return false
-            }else if(peek(array) === '{'){
+            }else if(array[array.length -1] === '{'){
                 array.pop();
             }else{
                 return false;
