@@ -8,14 +8,14 @@ function returnObject(s){
     // }
 
     // Second Way
-    let result = s.split('').map((y) => newObj[y] = y)
+    // let result = s.split('').map((y) => newObj[y] = y)
 
 
     // Third Way
     // s.split('').forEach((x) => newObj[x] = x)
 
     // Fourth Way
-    s.split('').reduce((x) => newObj[x] = x)
+    s.split('').reduce((previous, current) => newObj[previous] = current)
     console.log(newObj)
 }
 returnObject(string3);

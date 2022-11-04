@@ -11,22 +11,30 @@ function reverseString(){
     
     
 
-    // let arr = [''];
+    let arr = [''];
 
-    // for(let i = 0; i<string.length;i++){
-    //     if(string[i] === '{'){
-    //         arr.push(string[i])
-    //     }else if(string[i] === '}'){
-    //         arr[arr.length-1] += '}'
-    //         arr.push('');
-    //     }else{
-    //         arr[arr.length-1] += string[i]
-    //     }
-    // }
-
-    string.split('')
-
+    for(let i = 0; i<string.length;i++){
+        if(string[i] === '{'){
+            arr.push(string[i])
+        }else if(string[i] === '}'){
+            arr[arr.length-1] += '}'
+            arr.push('');
+        }else{
+            arr[arr.length-1] += string[i]
+        }
+    }
     console.log(arr)
+
+    for(let x = 0; x < arr.length; x++){
+        if(arr[x].split('').includes('{' && '}') === false){
+            let newString = arr[x].split('').reverse().join('')
+            arr[x] = newString;
+        }else{
+            continue;
+        }
+    }
+    console.log(arr.join(''))
+    
 
     // console.log(s.split(/(\w+(?=\{|$)|\{\w+\})/g))
     // let startIndex;
