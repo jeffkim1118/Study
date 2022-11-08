@@ -7,10 +7,8 @@ function reverseString(){
 
     // let arr = ['sdfosfddf', '{sfsdf}', 'fddsafsd']
 
-    let string = 'abs{dkjfklsd}dkfjsdkf'
+    let string = 'abs{dkjfklsd}dkfjsdkf{hello}'
     
-    
-
     let arr = [''];
 
     for(let i = 0; i<string.length;i++){
