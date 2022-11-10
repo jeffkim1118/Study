@@ -8,16 +8,15 @@ var twoSum = function(nums,target) {
     //          }
     //      }
     //  }
-    let ans = [];
+
     const chart = {};
     for(let i = 0; i < nums.length; i++){
         if(chart[target - nums[i]] !== undefined){
-            ans[0] = parseInt(chart[target-nums[i]]);
-            ans[1] = i;
-            return ans
+            return [chart[target-nums[i]],i]
         }
         chart[nums[i]] = i
     }
+
  };
  
 console.log(twoSum([2,7,11,45], 9))
