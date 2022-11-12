@@ -10,14 +10,25 @@ var twoSum = function(nums,target) {
     //  }
 
     const chart = {};
+    const resultChart = {};
+    let arr = [];
+    let insideArray = [];
     for(let i = 0; i < nums.length; i++){
+        // find if the number exist in the chart
+        // if the number exist, store that in resultChart obj
         if(chart[target - nums[i]] !== undefined){
-            return [chart[target-nums[i]],i]
+            resultChart[target-nums[i]]= nums[i]
+            
         }
         chart[nums[i]] = i
+        
     }
-
+    insideArray.push(resultChart)
+    arr.push(insideArray)
+    console.log(arr)
  };
- 
-console.log(twoSum([2,7,11,45], 9))
-console.log(twoSum([3,2,4], 6))
+ twoSum([2,7,11,45,8,10], 18)
+ twoSum([2,7], 9)
+ twoSum([2,7,11,45,8,10], 100)
+// console.log(twoSum([2,7,11,45,8,10], 18))
+// console.log(twoSum([3,2,4], 6))
