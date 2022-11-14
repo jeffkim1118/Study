@@ -26,7 +26,13 @@ function myFunction(obj){
     //return stringResult + ' ' + numberResult
     
     // 4. All the elements in each array to be object with key as index and value as the element of the array index.
-    arraysOfA
+    let a = [];
+    arraysOfA.forEach((array) => array.forEach((e) => {
+        const newObj = {};
+        newObj[array.indexOf(e)] = e;
+        a.push(newObj);
+    }))
+    return a
 }
 
 const myObj = {
