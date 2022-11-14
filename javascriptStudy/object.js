@@ -8,9 +8,11 @@
 
 function myFunction(obj){
     // 1. Return max length of longest array.
-    let arraysOfA = Object.values(obj)
-    let maxLength = Math.max(...arraysOfA.map((array) => array.length))
+    // let arraysOfA = Object.values(obj)
+    // let maxLength = Math.max(...arraysOfA.map((array) => array.length))
     // return maxLength;
+    // return Math.max(...Object.values(obj).map((array => array.length)))
+    
 
     // 2. Return all the strings in the arrays.
     // 3. Return all the numbers in array.
@@ -32,7 +34,11 @@ function myFunction(obj){
         newObj[array.indexOf(e)] = e;
         a.push(newObj);
     }))
-    return a
+    // return a
+
+
+    // 5. Add booleans into the arrays, do not count booleans as part of the length of the arrays and do not add key value in the objects for booleans.
+
 }
 
 const myObj = {
