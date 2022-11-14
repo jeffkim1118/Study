@@ -14,7 +14,11 @@
  * @return {ListNode}
  */
  var deleteDuplicates = function(head) {
-    
+    let curr = head;
+
+    if(curr.val === curr.next){
+        
+    }
 };
 
 console.log(deleteDuplicates([1,1,2])) //expected [1,2]
