@@ -12,9 +12,13 @@ function myFunction(obj){
     // let maxLength = Math.max(...arraysOfA.map((array) => array.length))
     // return maxLength;
     // return Math.max(...Object.values(obj).map((array => array.length)))
-    
 
-    // 2. Return all the strings in the arrays.
+    // Shortest array
+    // let arraysOfA = Object.values(obj)
+    // let minLength = Math.min(...arraysOfA.map((array) => array.length))
+    // return minLength
+
+    // 2. Return all the strings in arrays.
     // 3. Return all the numbers in array.
     // let stringResult = [];
     // let numberResult = [];
@@ -38,22 +42,26 @@ function myFunction(obj){
 
 
     // 5. Add booleans into the arrays, do not count booleans as part of the length of the arrays and do not add key value in the objects for booleans.
-    Object.values(obj).forEach(array => array.push(false))
-    let values = Object.values(obj)
+    // Object.values(obj).forEach(array => array.push(false))
+    // let values = Object.values(obj)
     // return Math.max(...values.map(ele => ele.filter(Boolean).length))
 
-    let newArray = [];
-    values.map((val) => val.map((ele) => {
-        const newObject = {}
-        if(typeof ele !== 'boolean'){
-            newObject[ele] = val.indexOf(ele)
-            newArray.push(newObject)
-        }
-    }))
-    return newArray;
+    // let newArray = [];
+    // values.map((val) => val.map((ele) => {
+    //     const newObject = {}
+    //     if(typeof ele !== 'boolean'){
+    //         newObject[ele] = val.indexOf(ele)
+    //         newArray.push(newObject)
+    //     }
+    // }))
+    // return newArray;
     // Destructuring an object.
     // const {Manhattan, Brooklyn, Queens} = obj
     // return Manhattan
+
+    // let a,b,rest
+    // [a,b,...rest] = [1,2,3,4,5]
+    // console.log(a,b,rest)
 }
 
 const myObj = {
