@@ -48,17 +48,24 @@ function myFunction(obj, elementType = 'string', sub = 'not'){
     // }))
     // return stringResult + ' ' + numberResult
     
-    let counter = 0
-    arraysOfA.map((array) => array.forEach(element => {  
-        if(typeof element === elementType){
-            if(element.toLowerCase().includes('not')){
-                counter++
-            }
+    // let counter = 0
+    // arraysOfA.map((array) => array.forEach(element => {  
+    //     if(typeof element === elementType){
+    //         if(element.toLowerCase().includes('not')){
+    //             counter++
+    //         }
+    //     }
+    // }))
+    // return counter
+    let a = []
+   arraysOfA.map(array => array.map(element => {
+    const ob = {}
+        if(typeof element === 'object'){
+            ob[element.name] = element.gender
+            a.push(ob)
         }
     }))
-    return counter
-
-
+    return a
     // return result
     // [
     //     { '0': 'city' },
@@ -127,6 +134,6 @@ function myFunction(obj, elementType = 'string', sub = 'not'){
 const myObj = {
     Manhattan : ['city', 3, 5, 10, 'state', {name:'james', gender:'male'}],
     Brooklyn : ['nothing', 1, 3, 'cannot'],
-    Queens : ['something', 'flushing', {name:'test'}]
+    Queens : ['something', 'flushing', {name:'test', gender:'unknown'}]
 }
 console.log(myFunction(myObj))
