@@ -13,3 +13,17 @@ let person = {
   console.log(person.topic);  // "JavaScript"
   example(person);            // "Intro to JavaScript"
   console.log(person.topic);  // "Intro to JavaScript"
+
+
+  function median(array){
+    let sortedArray = array.sort((a,b) => a-b)
+    if(sortedArray%2 !== 0){
+      return Math.floor(sortedArray[sortedArray.length/2])
+    }else{
+      let first = sortedArray[sortedArray.length / 2]
+      let second = sortedArray[sortedArray.length / 2 - 1]
+      let result = (first + second) / 2
+      return result
+    }
+  }
+  console.log(median([3,6,2,7,23,4]))

@@ -48,3 +48,6 @@ let array = [1,2,4,5,5,5,6]
 console.log(mean(array))
 console.log(median(array))
 console.log(mode(array))
+
+
+
