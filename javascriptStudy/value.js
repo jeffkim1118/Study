@@ -17,8 +17,8 @@ let person = {
 
   function median(array){
     let sortedArray = array.sort((a,b) => a-b)
-    if(sortedArray%2 !== 0){
-      return Math.floor(sortedArray[sortedArray.length/2])
+    if(sortedArray % 2 !== 0){
+      return sortedArray[Math.floor(sortedArray[sortedArray.length/2])]
     }else{
       let first = sortedArray[sortedArray.length / 2]
       let second = sortedArray[sortedArray.length / 2 - 1]
@@ -27,3 +27,15 @@ let person = {
     }
   }
   console.log(median([3,6,2,7,23,4]))
+
+
+  function modeFinder(array){
+    let chart = {}
+   
+    array.forEach(ele => {
+      if(!chart[ele]){chart[ele] = 0;}
+      chart[ele]++;
+    })
+
+  }
+  console.log(modeFinder([3,6,2,3,7,23,4]))
