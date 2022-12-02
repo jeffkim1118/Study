@@ -37,5 +37,17 @@ let person = {
       chart[ele]++;
     })
 
+    let max = 0;
+    let result;
+    for(let key in chart){
+      
+      if(chart[key] > max){
+        max = chart[key]
+        result = key;
+      }else if(chart[key] === max){
+        
+      }
+      console.log(Number(result))
+    }
   }
-  console.log(modeFinder([3,6,2,3,7,23,4]))
+  console.log(modeFinder([3,6,6,6,2,3,7,23,4]))
