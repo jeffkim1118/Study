@@ -87,7 +87,6 @@ console.log(palin('jhaltdjhlajwog'))
 
 
 
-// Fibonacci Number
 
 
 
@@ -96,7 +95,6 @@ console.log(palin('jhaltdjhlajwog'))
 Given two strings needle and haystack, return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
 
  
-
 Example 1:
 
 Input: haystack = "sadbutsad", needle = "sad"
@@ -110,3 +108,7 @@ Output: -1
 Explanation: "leeto" did not occur in "leetcode", so we return -1.
 
 */
+function findNeedle(haystack, needle){
+    return haystack.indexOf(needle)
+}
+findNeedle("haegbsadbww", 'sad')
