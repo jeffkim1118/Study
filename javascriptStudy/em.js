@@ -111,4 +111,68 @@ Explanation: "leeto" did not occur in "leetcode", so we return -1.
 function findNeedle(haystack, needle){
     return haystack.indexOf(needle)
 }
-findNeedle("haegbsadbww", 'sad')
+console.log(findNeedle("haegbsadbww", 'sad'))
+
+
+
+
+// Caesars Cipher
+// Decrypt caesars cipher code
+
+function caesarsCipher(){
+    const chart = {
+        'A' : 'N',
+        'B' : 'O',
+        'C' : 'P',
+        'D' : 'Q',
+        'E' : 'R',
+        'F' : 'S',
+        'G' : 'T',
+        'H' : 'U',
+        'I' : 'V',
+        'J' : 'W',
+        'K' : 'X',
+        'L' : 'Y',
+        'M' : 'Z',
+        'N' : 'A',
+        'O' : 'B',
+        'P' : 'C',
+        'Q' : 'D',
+        'R' : 'E',
+        'S' : 'F',
+        'T' : 'G',
+        'U' : 'H',
+        'V' : 'I',
+        'W' : 'J',
+        'X' : 'K',
+        'Y' : 'L',
+        'Z' : 'M',
+        '!' : '!',
+        '?' : '?',
+        '.' : '.',
+        ',' : ','
+      }
+    
+      let result = [];
+    
+      for(let i = 0; i < str.length; i++){
+          if(str[i] === ' '){
+              result.push(' ')
+          }
+        for(const prop in chart){
+          if(str[i] === chart[prop]){
+            result.push(prop)
+          }
+        }
+      }
+      console.log(result.join(''));
+}
+console.log(caesarsCipher())
+
+
+
+function cashRegister(price, payment, cid){
+
+}
+//Arguments: price, payment, cash-in-drawer
+console.log(cashRegister(11.75, 20.00, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]))
