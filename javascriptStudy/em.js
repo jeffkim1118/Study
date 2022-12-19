@@ -110,6 +110,7 @@ Explanation: "leeto" did not occur in "leetcode", so we return -1.
 */
 function findNeedle(haystack, needle){
     // return haystack.indexOf(needle)
+
     if(needle === "") return 0;
     if(haystack===null || needle===null) return -1
     haystack_loop: for(let i = 0; i <= haystack.length-needle.length; i++){
@@ -167,21 +168,34 @@ function caesarsCipher(str){
         ',' : ','
       }
     
-      let result = [];
-    
+      let result = '';
+      
+      let obj = {}
+      for(let key in chart){
+        obj[chart[key]] = key
+      }
+      
       for(let i = 0; i < str.length; i++){
           if(str[i] === ' '){
-              result.push(' ')
+              result += ' '
           }
-        for(const prop in chart){
-          if(str[i] === chart[prop]){
-            result.push(prop)
+          // if(str[i] === obj[key]){
+          //   result.push()
+          // }
+          if(obj[str[i]]){
+            // result.push(obj[str[i]])
+            result += obj[str[i]]
           }
-        }
+          
+          
+          // if(str[i] === chart[prop]){
+          //   result.push(prop)
+          // }
+        
       }
-      return result.join('');
+      return result;
 }
-console.log(caesarsCipher('abadfe'))
+console.log(caesarsCipher("SERR CVMMN!"))
 
 
 
@@ -210,3 +224,7 @@ sorted in highest to lowest order, as the value of the change key.
 // }
 // //Arguments: price, payment, cash-in-drawer
 // console.log(cashRegister(11.75, 20.00, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]))
+
+
+
+
